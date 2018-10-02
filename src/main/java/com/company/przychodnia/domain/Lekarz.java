@@ -1,22 +1,23 @@
 package com.company.przychodnia.domain;
 
-/*import javax.persistence.Entity;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.List;*/
+import java.util.List;
 
-//@Entity
+////////////////////////////////////////@Entity
 public class Lekarz {
 
-    /*@Id
+    /*
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String imie;
     private String nazwisko;
     private List<Specjalizacja> specjalizacje;
-    private List<GodzinyPrzyjec> litaGodzinPrzyjec;
+    private List<GodzinyPrzyjec> listaGodzinPrzyjec;
     private String telefonKontaktowy;
     private String email;
     private String haslo;
@@ -24,11 +25,11 @@ public class Lekarz {
     public Lekarz() {
     }
 
-    public Lekarz(String imie, String nazwisko, List<Specjalizacja> specjalizacje, List<GodzinyPrzyjec> litaGodzinPrzyjec, String telefonKontaktowy, String email, String haslo) {
+    public Lekarz(String imie, String nazwisko, List<Specjalizacja> specjalizacje, List<GodzinyPrzyjec> listaGodzinPrzyjec, String telefonKontaktowy, String email, String haslo) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.specjalizacje = specjalizacje;
-        this.litaGodzinPrzyjec = litaGodzinPrzyjec;
+        this.listaGodzinPrzyjec = listaGodzinPrzyjec;
         this.telefonKontaktowy = telefonKontaktowy;
         this.email = email;
         this.haslo = haslo;
@@ -66,12 +67,12 @@ public class Lekarz {
         this.specjalizacje = specjalizacje;
     }
 
-    public List<GodzinyPrzyjec> getLitaGodzinPrzyjec() {
-        return litaGodzinPrzyjec;
+    public List<GodzinyPrzyjec> getListaGodzinPrzyjec() {
+        return listaGodzinPrzyjec;
     }
 
-    public void setLitaGodzinPrzyjec(List<GodzinyPrzyjec> litaGodzinPrzyjec) {
-        this.litaGodzinPrzyjec = litaGodzinPrzyjec;
+    public void setLitaGodzinPrzyjec(List<GodzinyPrzyjec> listaGodzinPrzyjec) {
+        this.listaGodzinPrzyjec = listaGodzinPrzyjec;
     }
 
     public String getTelefonKontaktowy() {
@@ -107,7 +108,7 @@ public class Lekarz {
                 Objects.equals(imie, lekarz.imie) &&
                 Objects.equals(nazwisko, lekarz.nazwisko) &&
                 Objects.equals(specjalizacje, lekarz.specjalizacje) &&
-                Objects.equals(litaGodzinPrzyjec, lekarz.litaGodzinPrzyjec) &&
+                Objects.equals(listaGodzinPrzyjec, lekarz.listaGodzinPrzyjec) &&
                 Objects.equals(telefonKontaktowy, lekarz.telefonKontaktowy) &&
                 Objects.equals(email, lekarz.email) &&
                 Objects.equals(haslo, lekarz.haslo);
@@ -116,7 +117,7 @@ public class Lekarz {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, imie, nazwisko, specjalizacje, litaGodzinPrzyjec, telefonKontaktowy, email, haslo);
+        return Objects.hash(id, imie, nazwisko, specjalizacje, listaGodzinPrzyjec, telefonKontaktowy, email, haslo);
     }
 
     @Override
@@ -126,7 +127,7 @@ public class Lekarz {
                 ", imie='" + imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +
                 ", specjalizacje=" + specjalizacje +
-                ", litaGodzinPrzyjec=" + litaGodzinPrzyjec +
+                ", listaGodzinPrzyjec=" + listaGodzinPrzyjec +
                 ", telefonKontaktowy='" + telefonKontaktowy + '\'' +
                 ", email='" + email + '\'' +
                 ", haslo='" + haslo + '\'' +

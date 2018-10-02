@@ -18,3 +18,21 @@
     font-size: 1.2em;
     margin-right: 20px;
 }
+
+.alert {
+    text-align: center;
+	margin-top: 20px;
+}
+
+.alert p {
+    text-align: center;
+}
+
+h2 {
+    color: #191970;
+}
+
+p {
+    text-align: justify;
+    color: #191970;
+}

@@ -44,6 +44,16 @@ public class PrzychodniaController {
         return "aktualnosci";
     }
 
+    @GetMapping("/oferta")
+    public String oferta() {
+        return "oferta";
+    }
+
+    @GetMapping("/kontakt")
+    public String kontakt() {
+        return "kontakt";
+    }
+
 
 
 }
