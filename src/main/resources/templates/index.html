@@ -23,7 +23,7 @@
                     <div class="caption">
                         <h3 th:text="${wiadomosc.temat}"></h3>
                         <p th:text="${wiadomosc.tresc}"></p>
-                        <p style="text-align:right"><small th:text="#{bodyPage.utworzono}+' '+${#temporals.format(wiadomosc.dataUtworzenia, 'dd.MM.yyyy')}"></small></p>
+                        <p style="text-align:right"><small th:text="#{bodyPage.utworzono}+' '+${#temporals.format(wiadomosc.dataUtworzenia, 'dd.MM.yyyy')} + #{bodyPage.oznaczenieRoku}"></small></p>
                     </div>
                 </div>
             </div>

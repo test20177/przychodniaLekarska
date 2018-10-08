@@ -26,14 +26,6 @@ public class PrzychodniaController {
 
     @GetMapping
     public String homePage(Model model) {
-
-        /*
-        List<Wiadomosc> wiadomosci = new ArrayList<>();
-        wiadomosci.add(new Wiadomosc("Wizyta odwołana", "Witaj na nowej platformie", LocalDateTime.of(2018, 7, 4, 14, 36)));
-        wiadomosci.add(new Wiadomosc("Powitanie", "Witaj na nowej platformie", LocalDateTime.of(2018, 7, 4, 14, 36)));
-        model.addAttribute("wiadomosci", wiadomosci);
-        */
-
         model.addAttribute("wiadomosci", wiadomosciService.pobierzOstatnieWiadomosci(3));
         return "index";
     }
