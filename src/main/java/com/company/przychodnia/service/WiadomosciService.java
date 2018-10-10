@@ -10,4 +10,8 @@ public interface WiadomosciService {
 
     List<Wiadomosc> pobierzOstatnieWiadomosci(int liczba);
 
+    void dodajWiadomosc(Wiadomosc wiadomosc);
+
+    void usunWiadomosc(Long id);
+
 }

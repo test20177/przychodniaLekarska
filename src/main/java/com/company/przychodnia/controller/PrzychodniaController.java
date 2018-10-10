@@ -2,6 +2,7 @@ package com.company.przychodnia.controller;
 
 import com.company.przychodnia.domain.Wiadomosc;
 import com.company.przychodnia.service.WiadomosciService;
+import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,13 +27,13 @@ public class PrzychodniaController {
 
     @GetMapping
     public String homePage(Model model) {
-        model.addAttribute("wiadomosci", wiadomosciService.pobierzOstatnieWiadomosci(3));
+        model.addAttribute("wiadomosci", Lists.reverse(wiadomosciService.pobierzOstatnieWiadomosci(3)));
         return "index";
     }
 
     @GetMapping("/aktualnosci")
     public String aktualnosci(Model model) {
-        model.addAttribute("wiadomosci", wiadomosciService.pobierzWszytkieWiadomosci());
+        model.addAttribute("wiadomosci", Lists.reverse(wiadomosciService.pobierzWszytkieWiadomosci()));
         return "aktualnosci";
     }
 
