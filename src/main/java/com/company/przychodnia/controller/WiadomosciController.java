@@ -36,6 +36,12 @@ public class WiadomosciController {
         return "redirect:/wiadomosci";
     }
 
+    @GetMapping("/zmien/{id}")
+    public String dodajWiadomoscFormularz(@PathVariable String id, Model model) {
+        model.addAttribute("wiadomosc", wiadomosciService.pobierzWiadomosc(Long.parseLong(id)));
+        return "dodajwiadomosc";
+    }
+
     @GetMapping("/usun/{id}")
     public String usunWiadomosc(@PathVariable String id) {
         wiadomosciService.usunWiadomosc(Long.parseLong(id));

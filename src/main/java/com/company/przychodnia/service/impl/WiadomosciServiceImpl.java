@@ -20,7 +20,7 @@ public class WiadomosciServiceImpl implements WiadomosciService {
 
     private final WiadomosciRepository wiadomosciRepository;
 
-    private final static Logger logger = LoggerFactory.getLogger(WiadomosciServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(WiadomosciServiceImpl.class);
 
     @Autowired
     public WiadomosciServiceImpl(WiadomosciRepository wiadomosciRepository) {
@@ -41,6 +41,12 @@ public class WiadomosciServiceImpl implements WiadomosciService {
             wiadomosci = wiadomosci.subList(wiadomosci.size() - liczba, wiadomosci.size());
         }
         return wiadomosci;
+    }
+
+    @Override
+    public Wiadomosc pobierzWiadomosc(Long id) {
+        logger.debug("Wywolano com.company.przychodnia.service.impl.pobierzWiadomosc({})", id);
+        return wiadomosciRepository.getOne(id);
     }
 
     @Override
