@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class DataLoader implements ApplicationRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(DataLoader.class);
-
+//
     private WiadomosciRepository wiadomosciRepository;
 
     @Autowired
