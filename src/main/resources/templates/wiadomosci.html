@@ -5,19 +5,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="/css/style.css" rel="stylesheet">
-    <title th:text="#{headerPage.title}"></title>
+    <3title th:text="#{headerPage.title}"></3title>
 </head>
 <body>
 <div class="container">
-    <div class="jumbotron">
-        <a href="?language=pl">PL</a><a href="?language=en">EN</a>
-        <h2 th:text="#{headerPage.header}"></h2>
-        <br><hr>
-        <a href="/" th:text="#{headerPage.link.glowna}"></a>
-        <a href="/aktualnosci" th:text="#{headerPage.link.aktualnosci}"></a>
-        <a href="/oferta" th:text="#{headerPage.link.oferta}"></a>
-        <a href="/kontakt" th:text="#{headerPage.link.kontakt}"></a>
-    </div>
+    <div id="header" th:include="page :: header"></div>
     <div class="container">
         <h2>Wiadomości</h2>
         <hr class="my-4"/>
@@ -50,18 +42,6 @@
         </div>
     </div>
 </div>
-<div class="container footer">
-    <div class="row">
-        <div class="col-xs-12">
-            <table class="table">
-                <tbody>
-                <tr class="info">
-                    <td  th:utext="#{footerPage.footer}"></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<div id="footer" th:include="page :: footer"></div>
 </body>
 </html>

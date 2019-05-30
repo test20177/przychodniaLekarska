@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="/css/style.css" rel="stylesheet">
+        <title th:text="#{headerPage.title}"></title>
+</head>
+<body>
+    <div th:fragment="header">
+        <div class="jumbotron">
+            <a href="?language=pl">PL</a><a href="?language=en">EN</a>
+            <h2 th:text="#{headerPage.header}"></h2>
+            <br><hr>
+            <a href="/" th:text="#{headerPage.link.glowna}"></a>
+            <a href="/aktualnosci" th:text="#{headerPage.link.aktualnosci}"></a>
+            <a href="/oferta" th:text="#{headerPage.link.oferta}"></a>
+            <a href="/kontakt" th:text="#{headerPage.link.kontakt}"></a>
+        </div>
+    </div>
+    <div></div>
+    <div th:fragment="footer" class="container footer">
+        <div class="row">
+                <div class="col-xs-12">
+                    <table class="table">
+                        <tbody>
+                        <tr class="info">
+                            <td  th:utext="#{footerPage.footer}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

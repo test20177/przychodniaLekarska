@@ -8,15 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="jumbotron">
-        <a href="?language=pl">PL</a><a href="?language=en">EN</a>
-        <h2 th:text="#{headerPage.header}"></h2>
-        <br><hr>
-        <a href="/" th:text="#{headerPage.link.glowna}"></a>
-        <a href="/aktualnosci" th:text="#{headerPage.link.aktualnosci}"></a>
-        <a href="/oferta" th:text="#{headerPage.link.oferta}"></a>
-        <a href="/kontakt" th:text="#{headerPage.link.kontakt}"></a>
-    </div>
+    <div id="header" th:include="page :: header"></div>
     <div class="row">
         <div class="col-xs-12" th:each="wiadomosc: ${wiadomosci}">
             <div class="thumbnail">
@@ -36,18 +28,6 @@
         </div>
     </div>
 </div>
-<div class="container footer">
-    <div class="row">
-        <div class="col-xs-12">
-            <table class="table">
-                <tbody>
-                <tr class="info">
-                    <td  th:utext="#{footerPage.footer}"></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<div id="footer" th:include="page :: footer"></div>
 </body>
 </html>
