@@ -8,40 +8,40 @@
     <title th:text="#{headerPage.title}"></title>
 </head>
 <body>
- <div class="container">
-    <div id="header" th:include="page :: header"></div>
     <div class="container">
-        <h2>Wiadomości</h2>
-        <hr class="my-4"/>
-        <p class="lead">
-            <a class="btn btn-primary" href="/wiadomosci/dodaj" role="button"><i class="fa fa-plus-square"></i> Dodaj wiadomość</a>
-        </p>
-        <div th:if="${#lists.isEmpty(wiadomosci)}">Brak wiadomości.</div>
-        <div th:if="${not #lists.isEmpty(wiadomosci)}">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col" style="text-align: center">Id</th>
-                        <th scope="col" style="text-align: center">Temat</th>
-                        <th scope="col" style="text-align: center">Treść</th>
-                        <th scope="col" style="text-align: center">Utworzono</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="wiadomosc: ${wiadomosci}">
-                        <th scope="row" th:text="${wiadomosc.id}">Id</th>
-                        <td th:text="${wiadomosc.temat}">Temat</td>
-                        <td th:text="${wiadomosc.tresc}">Treść</td>
-                        <td th:text="${#temporals.format(wiadomosc.dataUtworzenia, 'dd.MM.yyyy HH:mm')}" style="text-align: center">Data Utworzenia</td>
-                        <td><a class="btn btn-default btn-sm" th:href="@{/wiadomosci/zmien/__${wiadomosc.id}__}" role="button"><i class="fa fa-wrench"></i> Zmień</a></td>
-                        <td><a class="btn btn-default btn-sm" th:href="@{/wiadomosci/usun/__${wiadomosc.id}__}" role="button"><i class="fa fa-trash"></i> Usuń</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
+        <div id="header" th:include="page :: header"></div>
+        <div class="container">
+            <h2>Wiadomości</h2>
+            <hr class="my-4"/>
+            <p class="lead">
+                <a class="btn btn-primary" href="/wiadomosci/dodaj" role="button"><i class="fa fa-plus-square"></i> Dodaj wiadomość</a>
+            </p>
+            <div th:if="${#lists.isEmpty(wiadomosci)}">Brak wiadomości.</div>
+            <div th:if="${not #lists.isEmpty(wiadomosci)}">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: center">Id</th>
+                            <th scope="col" style="text-align: center">Temat</th>
+                            <th scope="col" style="text-align: center">Treść</th>
+                            <th scope="col" style="text-align: center">Utworzono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="wiadomosc: ${wiadomosci}">
+                            <th scope="row" th:text="${wiadomosc.id}">Id</th>
+                            <td th:text="${wiadomosc.temat}">Temat</td>
+                            <td th:text="${wiadomosc.tresc}">Treść</td>
+                            <td th:text="${#temporals.format(wiadomosc.dataUtworzenia, 'dd.MM.yyyy HH:mm')}" style="text-align: center">Data Utworzenia</td>
+                            <td><a class="btn btn-default btn-sm" th:href="@{/wiadomosci/zmien/__${wiadomosc.id}__}" role="button"><i class="fa fa-wrench"></i> Zmień</a></td>
+                            <td><a class="btn btn-default btn-sm" th:href="@{/wiadomosci/usun/__${wiadomosc.id}__}" role="button"><i class="fa fa-trash"></i> Usuń</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
         </div>
     </div>
-</div>
 <div id="footer" th:include="page :: footer"></div>
 </body>
 </html>
