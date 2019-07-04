@@ -20,7 +20,7 @@ public class PrzychodniaApplication implements WebMvcConfigurer {
 	public LocaleResolver localeResolver() {
 		return new CookieLocaleResolver();
 	}
-//
+
 	@Bean
 	public LocaleChangeInterceptor localeChangeInterceptor() {
 		LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
