@@ -21,7 +21,7 @@ public class PrzychodniaApplication implements WebMvcConfigurer {
 		return new CookieLocaleResolver();
 	}
 
-	@Bean
+	@Bean//
 	public LocaleChangeInterceptor localeChangeInterceptor() {
 		LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
 		localeChangeInterceptor.setParamName("language");
