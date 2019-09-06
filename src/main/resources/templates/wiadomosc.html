@@ -11,9 +11,11 @@
 <div class="container">
     <div id="header" th:include="page :: header"></div>
     <div class="container">
-        <h2>Dodaj wiadomość</h2>
+        <h2>Wiadomość</h2>
         <hr class="my-4"/>
         <form action="#" class="form-horizontal" th:action="@{/wiadomosci/dodaj}" th:object="${wiadomosc}" method="post">
+            <input type="hidden" th:field="*{id}" />
+            <input type="hidden" th:field="*{dataUtworzenia}" />
             <div class="form-group">
                 <label for="temat" class="col-sm-2 control-label">Temat</label>
                 <div class="col-sm-9">

@@ -27,19 +27,19 @@ public class WiadomosciController {
     @GetMapping("/dodaj")
     public String dodajWiadomoscFormularz(Model model) {
         model.addAttribute("wiadomosc", new Wiadomosc());
-        return "dodajwiadomosc";
+        return "wiadomosc";
     }
 
     @PostMapping("/dodaj")
     public String dodajWiadomosc(@ModelAttribute Wiadomosc wiadomosc) {
-        wiadomosciService.dodajWiadomosc(wiadomosc);
+        wiadomosciService.zapiszWiadomosc(wiadomosc);
         return "redirect:/wiadomosci";
     }
 
     @GetMapping("/edytuj/{id}")
     public String dodajWiadomoscFormularz(@PathVariable String id, Model model) {
         model.addAttribute("wiadomosc", wiadomosciService.pobierzWiadomosc(Long.parseLong(id)));
-        return "dodajwiadomosc";
+        return "wiadomosc";
     }
 
     @GetMapping("/usun/{id}")

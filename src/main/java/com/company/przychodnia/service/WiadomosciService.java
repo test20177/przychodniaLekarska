@@ -12,7 +12,7 @@ public interface WiadomosciService {
 
     Wiadomosc pobierzWiadomosc(Long id);
 
-    void dodajWiadomosc(Wiadomosc wiadomosc);
+    void zapiszWiadomosc(Wiadomosc wiadomosc);
 
     void usunWiadomosc(Long id);
 

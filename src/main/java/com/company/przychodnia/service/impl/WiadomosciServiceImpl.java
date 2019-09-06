@@ -3,14 +3,12 @@ package com.company.przychodnia.service.impl;
 import com.company.przychodnia.domain.Wiadomosc;
 import com.company.przychodnia.repository.WiadomosciRepository;
 import com.company.przychodnia.service.WiadomosciService;
-import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -50,9 +48,12 @@ public class WiadomosciServiceImpl implements WiadomosciService {
     }
 
     @Override
-    public void dodajWiadomosc(Wiadomosc wiadomosc) {
+    public void zapiszWiadomosc(Wiadomosc wiadomosc) {
         logger.debug("Wywolano com.company.przychodnia.service.impl.zapiszWiadomosc()");
-        wiadomosc.setDataUtworzenia(LocalDateTime.now());
+        if (wiadomosc.getDataUtworzenia() == null) {
+            wiadomosc.setDataUtworzenia(LocalDateTime.now());
+            logger.debug("Dodano biezaca date i czas do wiadomosci");
+        }
         logger.debug("Tresc wiadomosci do zapisania: {}", wiadomosc);
         wiadomosciRepository.save(wiadomosc);
         logger.info("Zapisano wiadomosc.");
