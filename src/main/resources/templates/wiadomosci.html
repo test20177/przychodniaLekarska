@@ -33,7 +33,7 @@
                             <td th:text="${wiadomosc.temat}">Temat</td>
                             <td th:text="${wiadomosc.tresc}">Treść</td>
                             <td th:text="${#temporals.format(wiadomosc.dataUtworzenia, 'dd.MM.yyyy HH:mm')}" style="text-align: center">Data Utworzenia</td>
-                            <td><a class="btn btn-default btn-sm" th:href="@{/wiadomosci/zmien/__${wiadomosc.id}__}" role="button"><i class="fa fa-wrench"></i> Zmień</a></td>
+                            <td><a class="btn btn-default btn-sm" th:href="@{/wiadomosci/edytuj/__${wiadomosc.id}__}" role="button"><i class="fa fa-wrench"></i> Edytuj</a></td>
                             <td><a class="btn btn-default btn-sm" th:href="@{/wiadomosci/usun/__${wiadomosc.id}__}" role="button"><i class="fa fa-trash"></i> Usuń</a></td>
                         </tr>
                     </tbody>

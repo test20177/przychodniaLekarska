@@ -36,7 +36,7 @@ public class WiadomosciController {
         return "redirect:/wiadomosci";
     }
 
-    @GetMapping("/zmien/{id}")
+    @GetMapping("/edytuj/{id}")
     public String dodajWiadomoscFormularz(@PathVariable String id, Model model) {
         model.addAttribute("wiadomosc", wiadomosciService.pobierzWiadomosc(Long.parseLong(id)));
         return "dodajwiadomosc";
