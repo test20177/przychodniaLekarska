@@ -41,6 +41,11 @@ public class PrzychodniaController {
         return "kontakt";
     }
 
+    @GetMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
+    }
+
 
 
 }

@@ -16,7 +16,7 @@
             <p class="lead">
                 <a class="btn btn-primary" href="/wiadomosci/dodaj" role="button"><i class="fa fa-plus-square"></i> Dodaj wiadomość</a>
             </p>
-            <div th:if="${#lists.isEmpty(wiadomosci)}">Brak wiadomości.</div>
+            <div th:if="${#lists.isEmpty(wiadomosci)}">Brak wiadomości.<p/></div>
             <div th:if="${not #lists.isEmpty(wiadomosci)}">
                 <table class="table">
                     <thead>
