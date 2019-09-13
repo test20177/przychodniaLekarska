@@ -12,16 +12,13 @@
             <a href="?language=pl">PL</a><a href="?language=en">EN</a>
             <h2 th:text="#{headerPage.header}"></h2>
             <br><hr>
-            <a href="/" th:text="#{headerPage.link.glowna}"></a>
-            <a href="/aktualnosci" th:text="#{headerPage.link.aktualnosci}"></a>
-            <a href="/oferta" th:text="#{headerPage.link.oferta}"></a>
-            <a href="/kontakt" th:text="#{headerPage.link.kontakt}"></a>
-
+            <a th:href="@{/}" th:text="#{headerPage.link.glowna}"></a>
+            <a th:href="@{/aktualnosci}" th:text="#{headerPage.link.aktualnosci}"></a>
+            <a th:href="@{/oferta}" th:text="#{headerPage.link.oferta}"></a>
+            <a th:href="@{/kontakt}" th:text="#{headerPage.link.kontakt}"></a>
             <a class="btn btn-primary" th:href="@{/login}" th:text="#{headerPage.link.zaloguj}" role="button"></a>
             <a class="btn btn-primary" th:href="@{/dashboard}" th:text="#{headerPage.link.dashboard}" role="button"></a>
             <a class="btn btn-primary" th:href="@{/logout}" th:text="#{headerPage.link.wyloguj}" role="button"></a>
-
-
         </div>
     </div>
     <div></div>

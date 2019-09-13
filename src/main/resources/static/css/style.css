@@ -28,6 +28,12 @@
     text-align: center;
 }
 
+.btn-big {
+    width: 300px;
+    height: 150px;
+    font-size: 20px;
+}
+
 h2 {
     color: #191970;
 }
@@ -36,3 +42,4 @@ p {
     text-align: justify;
     color: #191970;
 }
+
