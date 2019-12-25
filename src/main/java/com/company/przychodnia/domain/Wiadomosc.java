@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -16,8 +19,12 @@ public class Wiadomosc {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Size(min=2, max=80, message = "Niepoprawny temat wiadomości. Musi zawierać co najmniej 2 znaki i nie więcej niż 80.")
     private String temat;
+
+    @Size(min=2, max=400, message = "Niepoprawna treść wiadomości. Musi zawierać co najmniej 2 znaki i nie więcej niż 400.")
     private String tresc;
+
     private LocalDateTime dataUtworzenia;
 
     public Wiadomosc() {
@@ -42,7 +49,7 @@ public class Wiadomosc {
     }
 
     public void setTemat(String temat) {
-        this.temat = temat;
+        this.temat = temat.trim();
     }
 
     public String getTresc() {
@@ -50,7 +57,7 @@ public class Wiadomosc {
     }
 
     public void setTresc(String tresc) {
-        this.tresc = tresc;
+        this.tresc = tresc.trim();
     }
 
     public LocalDateTime getDataUtworzenia() {

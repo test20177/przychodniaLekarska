@@ -5,7 +5,10 @@ import com.company.przychodnia.service.WiadomosciService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/wiadomosci")
@@ -31,7 +34,12 @@ public class WiadomosciController {
     }
 
     @PostMapping("/dodaj")
-    public String dodajWiadomosc(@ModelAttribute Wiadomosc wiadomosc) {
+    public String dodajWiadomosc(@Valid @ModelAttribute Wiadomosc wiadomosc, BindingResult bindingResult) {
+
+        if(bindingResult.hasErrors()) {
+            return "wiadomosc";
+        }
+
         wiadomosciService.zapiszWiadomosc(wiadomosc);
         return "redirect:/wiadomosci";
     }

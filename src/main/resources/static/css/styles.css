@@ -34,6 +34,20 @@
     font-size: 20px;
 }
 
+.field-validation-error {
+  display: inline;
+  line-height: 3;
+  padding: .4em .6em .4em;
+  font-size: 95%;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color: #d9534f;
+}
+
 h2 {
     color: #191970;
 }
