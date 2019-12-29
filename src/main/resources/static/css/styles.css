@@ -48,6 +48,16 @@
   background-color: #d9534f;
 }
 
+.btn-header {
+  margin-bottom: .2em;
+  margin-left: -1em;
+}
+
+.btn-header-first {
+    margin-bottom: .2em;
+    margin-left: 4em;
+}
+
 h2 {
     color: #191970;
 }
