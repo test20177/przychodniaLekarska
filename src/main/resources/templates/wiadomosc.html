@@ -20,7 +20,7 @@
             <div class="form-group">
                 <label for="temat" class="col-sm-2 control-label">Temat</label>
                 <div class="col-sm-9">
-                    <input class="form-control" type="text" th:field="*{temat}" placeholder="Temat wiadomości"/>
+                    <input class="form-control" type="text" id="temat" th:field="*{temat}" placeholder="Temat wiadomości"/>
                     <div th:if="${#fields.hasErrors('temat')}">
                         <span th:errors="*{temat}" class="field-validation-error">Błąd tematu</span>
                     </div>
@@ -29,7 +29,7 @@
             <div class="form-group">
                 <label for="tresc" class="col-sm-2 control-label">Treść</label>
                 <div class="col-sm-9">
-                    <textarea class="form-control"  th:field="*{tresc}" placeholder="Treść wiadomości" rows="3" style="resize: vertical"></textarea>
+                    <textarea class="form-control resize-vertical" id="tresc" th:field="*{tresc}" placeholder="Treść wiadomości" rows="3"></textarea>
                     <div th:if="${#fields.hasErrors('tresc')}">
                         <span th:errors="*{tresc}" class="field-validation-error">Błąd treści</span>
                     </div>

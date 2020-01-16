@@ -58,6 +58,18 @@
     margin-left: 4em;
 }
 
+.right-align {
+    text-align: right;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.resize-vertical {
+    resize: vertical;
+}
+
 h2 {
     color: #191970;
 }
