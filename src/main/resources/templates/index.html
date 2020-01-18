@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12" th:if="${not #lists.isEmpty(wiadomosci)}">
+            <div class="col-xs-12" th:unless="${#lists.isEmpty(wiadomosci)}">
                 <p class="right-align">
                     <a th:href="@{/aktualnosci}" th:text="#{bodyPage.link.wiecej}"></a>
                 </p>
