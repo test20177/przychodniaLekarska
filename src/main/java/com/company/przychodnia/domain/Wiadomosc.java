@@ -11,7 +11,6 @@ import java.util.Objects;
 @Entity
 public class Wiadomosc {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

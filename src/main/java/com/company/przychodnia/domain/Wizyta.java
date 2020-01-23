@@ -109,4 +109,5 @@ public class Wizyta {
                 ", godzinaZakoncznia='" + godzinaZakoncznia + '\'' +
                 '}';
     }*/
+
 }
