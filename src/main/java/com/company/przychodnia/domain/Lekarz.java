@@ -133,4 +133,5 @@ public class Lekarz {
                 ", haslo='" + haslo + '\'' +
                 '}';
     }*/
+
 }
